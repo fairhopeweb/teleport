@@ -44,8 +44,6 @@ type Lock interface {
 // NewLock is a convenience method to create a Lock resource.
 func NewLock(name string, spec LockSpecV2) (Lock, error) {
 	lock := &LockV2{
-		Kind:    KindLock,
-		Version: V2,
 		Metadata: Metadata{
 			Name: name,
 		},
